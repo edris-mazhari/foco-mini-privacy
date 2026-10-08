@@ -13,6 +13,7 @@
         .header .subtitle { color: #666; font-size: 1.1em; }
         .content { background: #fff; padding: 40px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); }
         .content h2 { font-size: 1.4em; color: #1a1a1a; margin: 30px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #f0f0f0; }
+        .content h3 { font-size: 1.1em; color: #1a1a1a; margin: 20px 0 10px; }
         .content p { margin-bottom: 15px; color: #444; }
         .content ul { margin: 10px 0 15px 20px; }
         .content li { margin-bottom: 8px; color: #444; }
@@ -29,80 +30,89 @@
         </div>
         <div class="content">
             <p><strong>Effective Date:</strong> September 1, 2026</p>
-            <p><strong>Last Updated:</strong> October 7, 2026</p>
+            <p><strong>Last Updated:</strong> October 8, 2026</p>
 
             <h2>1. Introduction</h2>
-            <p>Welcome to Foco Mini ("we," "our," or "us"). We are committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard information when you use the Foco Mini mobile application (the "App"), which is a security alarm system controller for managing your Foco Mini hardware devices.</p>
+            <p>Welcome to Foco Mini ("we," "our," or "us"). We are committed to protecting your privacy. This Privacy Policy explains what information the Foco Mini mobile application (the "App") handles and how it is used and protected. The App is a controller for Foco Mini security alarm hardware: it sends SMS commands from your phone to your alarm panel's SIM card.</p>
 
-            <h2>2. Information We Collect</h2>
-            <p>The Foco Mini App operates primarily as a local device management tool. We collect the following types of information:</p>
+            <h2>2. Information the App Handles</h2>
+            <p>The App works entirely on your device. It has no user accounts and does not connect to our servers.</p>
 
             <h3>2.1 Information Stored Locally on Your Device</h3>
             <ul>
-                <li><strong>Device Information:</strong> Device names, SIM card numbers, device serial numbers, and device configuration settings for your Foco Mini alarm system hardware.</li>
-                <li><strong>User Profiles:</strong> User names, phone numbers, user numbers, partition numbers, and access mode settings for alarm system users.</li>
-                <li><strong>Security Credentials:</strong> Passwords are stored locally using SHA-256 hashing with random salts. We never store plain-text passwords.</li>
-                <li><strong>Zone Configurations:</strong> Wireless zone names, numbers, types, and alert settings for your security sensors.</li>
-                <li><strong>Voice Messages:</strong> Recorded voice alert messages (up to 15 seconds) stored locally on your device.</li>
-                <li><strong>Auto Control Settings:</strong> Scheduled automation rules and relay configurations.</li>
-                <li><strong>App Preferences:</strong> Theme settings, language preferences, and calendar type selections.</li>
+                <li><strong>Alarm Device Information:</strong> Device names, the SIM card number of each alarm panel, the alarm device password, the charge (USSD) code, and other device configuration settings.</li>
+                <li><strong>User Profiles:</strong> Names, phone numbers, user numbers, partition numbers, and access mode settings for the people you add to your alarm system.</li>
+                <li><strong>Zone Configurations:</strong> Wired and wireless zone names, numbers, types, and alert settings for your security sensors.</li>
+                <li><strong>Auto Control Settings:</strong> Scheduled automation rules.</li>
+                <li><strong>App Lock Password:</strong> If you set an app lock password, only a salted SHA-256 hash of it is stored. The password itself is never stored.</li>
+                <li><strong>App Preferences:</strong> Theme, language, and calendar type.</li>
             </ul>
+            <p>The alarm device password is stored on your device in readable form, because the App must include it in every SMS command it sends to your alarm panel.</p>
 
             <h3>2.2 Information We Do NOT Collect</h3>
             <div class="highlight">
-                <p>We want to be clear: <strong>We do not collect, transmit, or store any of your data on external servers.</strong> All data remains entirely on your local device. We have no access to your device information, alarm settings, user data, or any other content within the App.</p>
+                <p><strong>We do not collect, transmit, or store any of your data on our servers.</strong> All information stays on your device. We have no access to your device information, alarm settings, user data, or any other content in the App.</p>
             </div>
 
-            <h2>3. How We Use Information</h2>
-            <p>All information stored in the App is used solely for:</p>
+            <h2>3. How the Information Is Used</h2>
+            <p>Information stored in the App is used only to:</p>
             <ul>
-                <li>Managing and configuring your Foco Mini alarm system hardware</li>
-                <li>Controlling security devices via SMS commands</li>
-                <li>Storing your security preferences and user configurations</li>
-                <li>Providing biometric authentication (Face ID / Touch ID) for secure app access</li>
-                <li>Enabling backup and restore functionality for device data</li>
+                <li>Manage and configure your Foco Mini alarm hardware</li>
+                <li>Build and send SMS commands to your alarm panel</li>
+                <li>Remember your settings and the users and zones you configure</li>
+                <li>Lock the App with a password or biometric authentication (Face ID / Touch ID) if you enable it</li>
+                <li>Create and restore backup files when you ask it to</li>
             </ul>
 
             <h2>4. Biometric Authentication</h2>
-            <p>The App uses your device's biometric authentication system (Face ID on iOS, fingerprint on Android) to provide secure and convenient access. Biometric data is processed entirely on your device through the operating system's secure enclave. We do not have access to your biometric data, and it is never transmitted or stored by the App.</p>
+            <p>If you enable it, the App uses your device's biometric authentication (Face ID or Touch ID on iOS, fingerprint on Android) to unlock the App. Biometric checks are performed entirely by your device's operating system. The App only receives a success or failure result and never has access to your biometric data.</p>
 
             <h2>5. SMS Communication</h2>
-            <p>The App communicates with your Foco Mini alarm system hardware via SMS messages. These SMS messages are sent directly from your device to your alarm system's SIM card number. We do not intercept, read, or store any SMS content. SMS communication is a standard feature of your mobile carrier and is subject to your carrier's privacy policy.</p>
+            <p>The App controls your alarm system by opening your phone's Messages app with a pre-filled SMS addressed to your alarm panel's SIM card number. These messages contain the command and your alarm device password, and are sent only when you confirm them. They travel through your mobile carrier like any other SMS and are subject to your carrier's privacy policy. We do not receive, read, or store any SMS content.</p>
+            <p>Voice alert messages are recorded and played back by the alarm hardware itself during a phone call it places to you. The App only sends the SMS command that starts the recording or playback; no audio is recorded or stored by the App.</p>
 
             <h2>6. Third-Party Services</h2>
-            <p>The App does not integrate with any third-party analytics, advertising, or data collection services. We do not use:</p>
+            <p>The App does not include any third-party analytics, advertising, tracking, or data collection services. We do not use:</p>
             <ul>
                 <li>Google Analytics or Firebase Analytics</li>
                 <li>Facebook SDK or any social media tracking</li>
                 <li>Advertising networks or ad trackers</li>
-                <li>Crash reporting services that transmit personal data</li>
+                <li>Crash reporting services</li>
                 <li>Cloud storage services for user data</li>
             </ul>
 
             <h2>7. Data Security</h2>
-            <p>We implement industry-standard security measures to protect your data:</p>
             <ul>
-                <li>Passwords are encrypted using SHA-256 with unique random salts</li>
-                <li>All data is stored locally on your device using secure storage</li>
-                <li>No data is transmitted to external servers</li>
+                <li>The app lock password is stored only as a SHA-256 hash with a unique random salt</li>
+                <li>All data is stored in the App's private storage on your device, protected by your operating system</li>
+                <li>No data is transmitted to our servers</li>
                 <li>Biometric authentication is handled by your device's secure hardware</li>
             </ul>
 
             <h2>8. Data Backup and Export</h2>
-            <p>The App allows you to create local backup files containing your device configurations. These backup files are stored on your device and can be exported via the system share sheet. You have full control over these files. We do not have access to your backup files.</p>
+            <p>The App can create a backup file of your device configurations, including alarm device passwords and user phone numbers. You choose where the file is saved, and you can restore it later from the App. These files stay under your control; we do not have access to them. Keep backup files in a safe place and do not share them with people who should not control your alarm system.</p>
 
-            <h2>9. Children's Privacy</h2>
-            <p>The App is not directed at children under the age of 13. We do not knowingly collect information from children under 13. If you are a parent or guardian and believe your child has provided us with personal information, please contact us so we can take appropriate action.</p>
-
-            <h2>10. Changes to This Privacy Policy</h2>
-            <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date at the top. You are advised to review this Privacy Policy periodically for any changes.</p>
-
-            <h2>11. Contact Us</h2>
-            <p>If you have any questions about this Privacy Policy or our practices, please contact us at:</p>
+            <h2>9. Data Retention and Deletion</h2>
+            <p>Information is kept on your device until you delete it. You can:</p>
             <ul>
-                <li><strong>Company:</strong> Foco Security Systems</li>
+                <li>Delete an individual user, wireless zone, automation rule, or alarm device from within the App</li>
+                <li>Remove the app lock password from the App settings</li>
+                <li>Delete all App data by uninstalling the App</li>
+                <li>Delete any backup files you created using your device's Files app</li>
+            </ul>
+            <p>Because we never receive your data, there is nothing for us to delete on our side.</p>
+
+            <h2>10. Children's Privacy</h2>
+            <p>The App is not directed at children under the age of 13, and we do not knowingly collect information from children. If you believe a child has provided us with personal information, please contact us so we can take appropriate action.</p>
+
+            <h2>11. Changes to This Privacy Policy</h2>
+            <p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated "Last Updated" date.</p>
+
+            <h2>12. Contact Us</h2>
+            <p>If you have any questions about this Privacy Policy, please contact us at:</p>
+            <ul>
+                <li><strong>Company:</strong> Betta Foco Security Systems</li>
                 <li><strong>Email:</strong> bettasupport@gmail.com</li>
-                <!-- <li><strong>Website:</strong> https://foco.app</li> -->
             </ul>
         </div>
         <div class="footer">
